@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    service-label-key: service-label-gifs
+    app: app-gifs
   name: service-app-gifs
 spec:
   type: ClusterIP
@@ -11,4 +11,4 @@ spec:
     port: 80
     protocol: TCP
   selector:
-    deployment-label-key: deployment-app-gifs
+    app: app-gifs 
