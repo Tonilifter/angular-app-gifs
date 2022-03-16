@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-app-gifs
+spec:
+  selector:
+    matchLabels:
+      app: app-gifs
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        label-key : label-value  
+    spec:
+      containers:
+        - name: deploment-container-app-gifs
+          image: angumol/app-gifs:v1
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
