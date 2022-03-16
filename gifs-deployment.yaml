@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        label-key : label-value  
+        app : app-gifs  
     spec:
       containers:
         - name: deploment-container-app-gifs
